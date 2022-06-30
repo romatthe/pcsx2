@@ -341,6 +341,7 @@ public:
 
 	void CopyEnv(GSDrawingEnvironment* dest, GSDrawingEnvironment* src, int ctx);
 	void Flush();
+	u32 CalcMask(int exp, int max_exp);
 	void FlushPrim();
 	bool TestDrawChanged();
 	void FlushWrite();

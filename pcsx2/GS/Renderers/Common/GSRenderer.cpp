@@ -310,7 +310,7 @@ bool GSRenderer::Merge(int field)
 		{
 			// We do half because FFMD is a half sized framebuffer, then we offset by 1 in the shader for the actual interlace
 			if(GetUpscaleMultiplier() > 1)
-				interlace_offset += ((((tex[1] ? tex[1]->GetScale().y : tex[0]->GetScale().y) + 0.5f) * 0.5f) - 1.0f) * static_cast<float>(field ^ field2);
+				interlace_offset += ((((tex[1] ? tex[1]->GetScale().y : tex[0]->GetScale().y)) * 0.5f)) * static_cast<float>(field ^ field2);
 			offset = 1.0f;
 		}
 		// Restore manually offset "interlace" lines
