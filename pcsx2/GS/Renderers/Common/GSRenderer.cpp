@@ -275,7 +275,7 @@ float GSRenderer::GetModXYOffset()
 	return 0.0f;
 }
 
-static float GetCurrentAspectRatioFloat(bool is_progressive)
+float GetCurrentAspectRatioFloat(bool is_progressive)
 {
 	static constexpr std::array<float, static_cast<size_t>(AspectRatioType::MaxCount) + 1> ars = {{4.0f / 3.0f, 4.0f / 3.0f, 4.0f / 3.0f, 16.0f / 9.0f, 10.0f / 7.0f, 3.0f / 2.0f}};
 	return ars[static_cast<u32>(GSConfig.AspectRatio) + (3u * (is_progressive && GSConfig.AspectRatio == AspectRatioType::RAuto4_3_3_2))];

@@ -278,6 +278,7 @@ enum class GSRendererType : s8
 	VK = 14,
 	Metal = 17,
 	DX12 = 15,
+	ParallelGS = 18
 };
 
 enum class GSVSyncMode : u8
@@ -816,6 +817,13 @@ struct Pcsx2Config
 		u8 ShadeBoost_Contrast = 50;
 		u8 ShadeBoost_Saturation = 50;
 		u8 PNGCompressionLevel = 1;
+		u8 PGSSuperSampling = 0;
+		u8 PGSHighResScanout = 0;
+		u8 PGSDisableMipmaps = 0;
+		u8 PGSDisableReadbackSync = 0;
+		u8 PGSSuperSampleTextures = 0;
+		u8 PGSSharpBackbuffer = 0;
+		u8 PGSBlendDemotion = 0;
 
 		u16 SWExtraThreads = 2;
 		u16 SWExtraThreadsHeight = 4;

@@ -721,6 +721,106 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="pgsRenderingTab">
+      <attribute name="title"><string>Rendering</string></attribute>
+      <layout class="QFormLayout" name="formLayout_11">
+       <item row="0" column="0">
+        <widget class="QLabel" name="pgsSuperSamplingLabel">
+         <property name="text">
+          <string>Super Sampling:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="pgsSuperSampling">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <item>
+          <property name="text">
+           <string>1x (native)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>2x SSAA (checkerboard)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4x SSAA (sparse grid)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>4x SSAA (ordered grid, high-res output capable)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>8x SSAA (checkerboard, high-res output capable)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>16x SSAA (sparse grid, high-res output capable)</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0">
+          <widget class="QCheckBox" name="pgsHighResScanout">
+           <property name="text">
+            <string>High-resolution scanout</string>
+           </property>
+          </widget>
+       </item>
+       <item row="1" column="1">
+          <widget class="QCheckBox" name="pgsSuperSampleTextures">
+           <property name="text">
+            <string>Super-sample textures</string>
+           </property>
+          </widget>
+       </item>
+       <item row="2" column="0">
+          <widget class="QCheckBox" name="pgsDisableMipmaps">
+           <property name="text">
+            <string>Disable mip-mapping</string>
+           </property>
+          </widget>
+       </item>
+       <item row="2" column="1">
+          <widget class="QCheckBox" name="pgsDisableReadbackSync">
+           <property name="text">
+            <string>Disable readback sync</string>
+           </property>
+          </widget>
+       </item>
+       <item row="3" column="0">
+          <widget class="QCheckBox" name="pgsSharpBackbuffer">
+           <property name="text">
+            <string>Sharp backbuffer hack</string>
+           </property>
+          </widget>
+       </item>
+       <item row="3" column="1">
+          <widget class="QCheckBox" name="pgsBlendDemotion">
+           <property name="text">
+            <string>Blend demotion hack</string>
+           </property>
+          </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QGroupBox" name="hardwareFixesTab">
       <attribute name="title">
        <string>Hardware Fixes</string>
